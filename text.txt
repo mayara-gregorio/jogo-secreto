@@ -1,0 +1,24 @@
+//o querySelector pega o valor da string de um determinado seletor css no body, pode ser classes tbm
+const para = document.querySelector("p")
+//adiciona um evento, onde "click" é a causa que gera o evento e atualizarNome é o evento chamado, não tem parênteses porque não é uma chamada de função
+para.addEventListener("click", atualizarNome)
+function atualizarNome(){
+    nome = prompt('Digite seu nome: ')
+    nome ? para.textContent = `Eu sou ${nome}!`: null
+}
+
+23/05/24
+//o querySelector seleciona um seletor do corpo do projeto
+//.innerHTML é um método para adicionar string a um elemento, seletor do corpo do projeto
+
+function show(){
+    let nome = document.querySelector('#nome').value
+    let idade = document.querySelector('#idade').value
+    let paragrafo = document.querySelector('p')
+    paragrafo.innerHTML = `O seu nome é ${nome} e sua idade é ${idade}`
+}
+
+function exibirTextoNaTela(tag, texto){
+    let campo = document.querySelector(tag)
+    campo.innerHTML = texto
+}
